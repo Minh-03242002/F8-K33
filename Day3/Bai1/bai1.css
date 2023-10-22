@@ -1,0 +1,25 @@
+.contact_info {
+  display: flex;
+  background-color: rgb(245, 245, 245);
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.message {
+  margin: 60px;
+}
+input {
+  width: 550px;
+  height: 25px;
+  margin-top: 10px;
+}
+textarea {
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: aqua;
+  width: 120px;
+  height: 35px;
+}

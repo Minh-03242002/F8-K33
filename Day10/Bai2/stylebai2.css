@@ -1,0 +1,104 @@
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+.container {
+
+
+}
+.slide {
+  width: 800px;
+  height: auto;
+  background-color: #fff;
+  margin: 30px auto;
+ 
+}
+
+.nav  {
+  display: flex;
+width: 800px;
+ 
+  position: relative;
+}
+.check{
+    display: none;
+}
+.nav1 , .nav2 , .nav3, .nav4{
+    border: 1px solid #ccc;
+    font-size: 15px;
+   font-weight: bold;
+    padding: 15px 6px ;
+    width: calc((100% / 4));
+    text-align: center;
+    color: #958b8b;
+   
+   
+}
+
+
+.nav1:hover >label,
+.nav2:hover >label,
+.nav3:hover >label,
+.nav4:hover >label{
+    background-color: aqua;
+    color: #fff;
+} 
+ .nav1:hover ,
+.nav2:hover ,
+.nav3:hover ,
+.nav4:hover {
+   
+    background-color: aqua;
+    color: #fff;
+}
+
+
+.sub-item1,.sub-item2,.sub-item3,.sub-item4{
+
+    display: none;
+    position: absolute;
+    max-width: 800px;
+   padding: 15px 25px;
+    text-align: left;
+    left: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    top: 49px;
+    transform-origin: 0% 0%;
+  transition: move 0.8s ease;
+  overflow-x: scroll;
+ 
+}
+.sub-item1,.sub-item2,.sub-item3,.sub-item4{
+   color: #5D5C5C
+}
+
+ #item1:checked ~ .sub-item1{
+    display: block;
+ }
+ #item1:checked ~ .sub-item1,
+ #item2:checked ~ .sub-item2,
+ #item3:checked ~ .sub-item3,
+ #item4:checked ~ .sub-item4{
+ display: block;
+ animation: move 1s ease ;
+}
+
+
+
+ @keyframes move {
+    from {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(-90deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}

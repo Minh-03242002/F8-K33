@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-text: #9e9ea4;
+}
+.container {
+  width: 1220px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.image {
+  position: relative;
+}
+.image .img-bottom {
+  background-image: url(https://nimblefincorp.com/wp-content/uploads/2023/04/Lawyer-jpg.webp);
+}
+.image .box {
+  width: 200px;
+  height: 300px;
+  background-color: dodgerblue;
+  position: absolute;
+  top: 140px;
+  right: 213px;
+  border: 10px solid;
+  border-image-source: url(https://nimblefincorp.com/wp-content/uploads/2023/04/Lawyer-jpg.webp);
+  border-image-slice: 30;
+  border-image-repeat: round;
+}
+.image .box .content {
+  position: absolute;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  margin: 164px 0 0 41px;
+  align-items: flex-end;
+}
+.image .box .content span {
+  background-image: url(https://nimblefincorp.com/wp-content/uploads/2023/04/Lawyer-jpg.webp);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.image .content span {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+
+  color: #fff;
+  opacity: 0.8;
+}
+.image .content p {
+  color: #fff;
+  font-weight: 500;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.list-item .item {
+  display: flex;
+  gap: 20px;
+}
+
+/* hover */
+.list-item .item:hover .left-info {
+  order: 3;
+  text-align: start;
+}
+.list-item .item:hover .item-center {
+  order: 2;
+}
+.list-item .item:hover .right-info {
+  order: 1;
+}
+.list-item .item:hover .btn {
+  background-color: #a26f5a;
+  color: #fff;
+}
+/* end hover */
+.item .left-info {
+  width: 300px;
+  text-align: end;
+}
+.item .left-info .title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+.item .left-info .decs {
+  width: 90%;
+  text-align: end;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 12px;
+
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+.item .item-center {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.item .dot {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  background-color: #ccc;
+}
+.item .dot span {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+  background-color: #38d1b8;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.item .line {
+  width: 1px;
+  margin-top: 10px;
+  height: 100px;
+  background-color: #d9d2d2d5;
+}
+
+.item .right-info {
+  position: relative;
+  font-weight: 500;
+  color: #9e9ea4;
+}
+.item .btn {
+  width: 120px;
+  height: 27px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  border: none;
+  text-align: center;
+  color: #9e9ea4;
+}
+.item .btn span {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}

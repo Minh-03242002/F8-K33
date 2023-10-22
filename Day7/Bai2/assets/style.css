@@ -1,0 +1,75 @@
+v * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+.profile {
+  padding: 30px;
+
+  position: relative;
+}
+.container .background {
+  left: 0;
+  right: 0;
+}
+.container .background img {
+  width: 100%;
+  height: 400px;
+
+  object-fit: cover;
+}
+.container .avatar {
+  position: absolute;
+  bottom: -81px;
+  left: 76px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.container .avatar img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding: 35px;
+  padding-top: 15px;
+}
+.container .header {
+  bottom: 64px;
+  left: 370px;
+  color: #fff;
+  font-family: "Asap";
+  position: absolute;
+}
+.container .info {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.container .info span {
+  font-size: 23px;
+}
+.container .list {
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+  padding-right: 10px;
+  display: flex;
+}
+.container .list a {
+  text-decoration: none;
+  color: #534636;
+  padding-right: 60px;
+  font-weight: 600;
+}
+.container .list a:hover {
+  color: red;
+}
+.container .list .introduce::after {
+  display: block;
+  content: "";
+  margin-top: 10px;
+  width: 100%;
+  height: 4px;
+  background-color: red;
+}

@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(./img/login-bg2.jpg);
+  background-size: cover;
+
+  background-position: bottom left;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  border-radius: 10px;
+  margin-top: calc(100vh / 2);
+  transform: translateY(-50%);
+}
+img {
+  max-width: 1380px;
+  top: -30px;
+  position: fixed;
+}
+.forms {
+  margin: 0 auto;
+  width: 630px;
+  border-radius: 9px;
+}
+.form {
+  display: flex;
+}
+.form .just-log {
+  background-color: #ff574d;
+  padding: 80px 20px;
+  width: 269px;
+}
+.form .just-log .just-log-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+.form .just-log .just-log-title .logo {
+  background-color: #fff;
+  font-size: 25px;
+  margin-right: 20px;
+  padding: 5px 10px;
+  color: #ff574d;
+}
+.form .just-log .sub-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.just-log .btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.just-log .btn button {
+  width: 160px;
+  height: 40px;
+  background-color: #fff;
+  color: #ff574d;
+  border: none;
+  border-radius: 4px;
+}
+.just-log .list-logo {
+  text-align: center;
+}
+.just-log .list-logo i {
+  background-color: rgb(184, 76, 76);
+  color: #fff;
+  font-size: 25px;
+  padding: 5px;
+}
+/*  style Login-===================================== */
+.form .login {
+  background-color:#fff;
+  width: 368px;
+}
+
+.form .login .title-login {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #2F2C31;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.login .line {
+  content: "";
+  height: 2px;
+  width: 20px;
+  color: #ff574d;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form .login .title-login::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  
+  width: 54px;
+  height: 1px;
+  bottom: -16px;
+  background-color: #ff574d;
+  right: calc(50% - 27px);
+}
+.form .login .title-login span {
+  color: #ff574d;
+}
+.login .form-login input {
+  margin-bottom: 16px;
+  width: 300px;
+  height: 38px;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0 15px;
+}
+.login .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 30px;
+  align-items: center;
+}
+.remember-me {
+  display: flex;
+  align-items: center;
+  position: relative;
+  user-select: none;
+}
+
+.remember-me::before {
+  content: "";
+  margin-right: 7px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #949291;
+}
+
+.remember-me::after {
+  content: "";
+  top: 2px;
+  left: 6px;
+  position: absolute;
+  width: 4px;
+  height: 9px;
+  border-width: 0 3px 3px 0;
+  border-color: #000;
+  border-style: solid;
+  transform: rotate(45deg);
+  display: none;
+}
+.row-left input[type="checkbox"] {
+  display: none;
+}
+
+.row-left input[type="checkbox"]:checked ~ .remember-me::after {
+  display: block;
+}
+.sign-up {
+  text-align: center;
+  color:#8D8785;
+}
+.sign-up a,
+.forgot-password {
+  color: #8D8785;
+  text-decoration: none;
+}
+.login-btn {
+  width: 80%;
+  background-color: #ff574d;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  height: 40px;
+  border-radius: 5px;
+  margin: 25px 30px;
+  margin-right: 5px;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  transform: scale(0.95);
+}
+.row-left .remember-me {
+  color:#8D8785;
+}

@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ecf4fc;
+  font-family: "Lato", sans-serif;
+}
+.container {
+  width: 1200px;
+  margin: 30px auto;
+}
+.service_layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.service_layout .service-item {
+  margin: 10px;
+  border: 1px solid transparent;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #ddd;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.service_layout .service-item:hover {
+  border: 2px solid #eb9898;
+  transform: translateX(-5px);
+}
+.service_layout .service-item p {
+  line-height: 30px;
+  margin: 10px 0 20px 0;
+  color: #666666;
+}
+.service_layout .service-item a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  width: 115px;
+}
+.h2 {
+  font-size: 18px;
+  font-weight: 700;
+  max-width: 115px;
+  line-height: 1.2;
+}
+img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+.image {
+  margin-left: 10px;
+}

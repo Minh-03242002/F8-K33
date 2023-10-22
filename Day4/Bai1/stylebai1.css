@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  background: rgb(54, 68, 83);
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+.container:hover input {
+  background-color: #ddd;
+}
+.container:hover ::placeholder {
+  color: rgb(242, 169, 41);
+}
+.container:hover .btn {
+  background-color: rgb(242, 169, 41);
+  color: #fff;
+}
+.content {
+  color: #fff;
+}
+.content p {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.ear_income {
+  color: rgb(242, 169, 41);
+}
+.cta {
+  display: flex;
+}
+.cta input {
+  width: 200px;
+  height: 40px;
+  border-radius: 2px;
+}
+.cta button {
+  width: 200px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background: rgb(243, 220, 89);
+}

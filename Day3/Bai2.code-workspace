@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "Bai2"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "F8-Offline-K3"
+  }
+}

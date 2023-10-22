@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "SFU";
+  src: url(./fonts/SFUTradeGothic-BoldCondensedTwenty.woff2;);
+}
+.banner {
+}
+.container {
+  font-family: SFU;
+}
+.container .background {
+  width: 1444px;
+  height: 450px;
+  background-size: 100% 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.container .blur {
+  position: absolute;
+  width: 547px;
+  height: 200px;
+  background-color: #ffff;
+  opacity: 0.8;
+  top: 125px;
+  left: 208px;
+  border-radius: 4px;
+}
+
+.container .blur .content {
+  opacity: 1;
+
+  padding: 20px 20px 0 20px;
+  color: #3f3424;
+}
+.container .blur header {
+  color: #bf4240;
+}
+.container .blur .sub-title {
+  font-size: 14px;
+}
+.container .blur .map {
+  display: flex;
+
+  align-items: center;
+  padding-top: 10px;
+}
+.blur .map i {
+  margin-right: 5px;
+}
+.price {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background-color: #bf4240;
+  top: 305px;
+  left: 567px;
+  border-radius: 4px;
+  display: flex;
+}
+.price p {
+  display: flex;
+  font-family: SFU;
+  margin: 0 auto;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}

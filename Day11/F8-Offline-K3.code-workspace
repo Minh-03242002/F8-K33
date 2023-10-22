@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../code"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "F8-Offline-K3"
+  }
+}

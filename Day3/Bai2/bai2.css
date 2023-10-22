@@ -1,0 +1,49 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.heading {
+  text-align: center;
+  position: relative;
+}
+.heading:after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 5px;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  background-color: rgb(70, 76, 236);
+}
+
+.feedback {
+  max-width: 1250px;
+  margin: 0 auto;
+  margin: 0 30px;
+  display: grid;
+
+  grid-gap: 36px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.feedback .feedback-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-item .comment {
+  font-style: italic;
+}
+
+img {
+  width: 65px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-bottom: 80px;
+}
+.name {
+  display: block;
+
+  font-weight: bold;
+}

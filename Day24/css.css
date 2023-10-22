@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-color: #8758ff;
+  width: 100vw;
+  min-height: 500px;
+  padding-top: 100px;
+}
+
+.todo_list {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  min-height: 400px;
+  background-color: #1b1a40;
+  margin-bottom: 40px;
+  padding: 30px 0;
+}
+.container_todo_list {
+  margin: 40px;
+  width: 420px;
+}
+.todo_list .title {
+  text-align: center;
+  color: #fff;
+}
+.todo_list .form_todo_list {
+  display: flex;
+  margin-top: 20px;
+  background-color: #1b1a40;
+  border: none;
+  overflow: auto;
+}
+.todo_list .form_todo_list input {
+  width: 500px;
+  margin: 0 auto;
+  height: 40px;
+  padding: 10px;
+  background-color: #1b1a40;
+  border: 1px solid #8758ff;
+  color: #fff;
+}
+.todo_list .form_todo_list .add_task {
+  width: 100px;
+  background-color: #8758ff;
+  border: 1px solid #8758ff;
+}
+.todo_list .list_todo {
+}
+.todo_list .list_todo .item {
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #8758ff;
+  align-items: center;
+  padding: 0 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.todo_list .list_todo .item i {
+  margin-left: 10px;
+}

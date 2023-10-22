@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./asset/fonts/fontawesome-free-6.4.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./asset/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">Hey there</h1>
+        <p class="subtitle">
+          <span>We'd like to hear from you.</span> Send us your message or just
+          say hy with our contact form or directly via phone, we love to chat.
+        </p>
+      </header>
+      <!-- form -->
+      <div class="forms">
+        <div class="form">
+          <input
+            type="text"
+            name="yourname"
+            id="yorname"
+            placeholder="Your name"
+          />
+          <p class="popup">Enter your name</p>
+          <label for="yorname">
+            <i class="fa-regular fa-user"></i>
+          </label>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="form">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="your@domain.com"
+          />
+          <p class="popup">Enter email</p>
+          <label for="email"><i class="fa-regular fa-envelope"></i> </label>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="form">
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="+84 0123 456"
+          />
+          <p class="popup">Enter yor phone</p>
+          <label for="number"><i class="fa-solid fa-mobile"></i> </label>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="form">
+          <select name="subject" id="subject">
+            <option value="0">1</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3">4</option>
+          </select>
+          <p class="popup">Enter your subject</p>
+          <label for="subject">
+            <i class="fa-solid fa-file"></i>
+          </label>
+        </div>
+        <div class="form">
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <label for="message" class="label-long">
+            <i class="fa-solid fa-message icon"> </i
+          >
+           
+          </label>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </div>
+      <div class="row" >
+        <input type="checkbox" name="send-message" id="send-message" hidden />
+        <label for="send-message" class="send-message" >
+          Send me a copy of this message
+        
+          
+        </label>
+        <button type="submit">SEND</button>
+      </div>
+    </div>
+  </body>
+</html>

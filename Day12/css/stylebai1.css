@@ -1,0 +1,482 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/landing-background.jpg);
+}
+.container-main .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-main .col-7 {
+  flex-basis: 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+.container-main .col-5 {
+  flex-basis: 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+.container-main > img {
+  width: 100%;
+  object-fit: cover;
+}
+.container-main .circle {
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  background: url(../images/dot-texture.png) repeat 0 0 #fff;
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  pointer-events: none;
+  z-index: -1;
+}
+.container-main .row .check-register:checked ~ .col-5 .box-login {
+  right: -100%;
+}
+.container-main .row .check-login:checked ~ .col-5 .box-create {
+  right: -100%;
+}
+.container-main .row .check-register:checked ~ .col-5 .box-create,
+.container-main .row .check-login:checked ~ .col-5 .box-login {
+  right: 13%;
+}
+.container-main .row .col-7 .content {
+  position: absolute;
+  top: 16%;
+  left: 13%;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+.container-main .row .col-7 .content .title-top {
+  color: #fff;
+  margin-top: 36px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+}
+.container-main .row .col-7 .content .title {
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 104px;
+  margin-top: -40px;
+}
+.container-main .row .col-7 .content .sub-title p {
+  font-family: "Rajdhani", sans-serif;
+  margin: 30px auto 0;
+  font-size: 1.125rem;
+  line-height: 1.3333333333em;
+  font-weight: 500;
+  margin: 0 auto;
+  width: 405px;
+  color: #fff;
+}
+.container-main .row .col-7 .content .form {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  gap: 0;
+}
+.container-main .row .col-7 .content .form .btn {
+  width: 180px;
+  height: 54px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.container-main .row .col-7 .content .form .login {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.container-main .row .col-7 .content .form .register {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.container-main .row .col-5 .box-login {
+  width: 484px;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  right: -100%;
+  padding: 46px;
+  border-radius: 12px;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  background-color: #fff;
+  transition: all 0.6s ease-in-out 0s;
+}
+.container-main .row .col-5 .box-login .rocket {
+  position: absolute;
+  z-index: 1;
+  top: -68px;
+  left: -80px;
+}
+.container-main .row .col-5 .box-login .account-login {
+  background-color: #fff;
+}
+.container-main .row .col-5 .box-login .account-login > .title {
+  margin-bottom: 76px;
+  text-align: center;
+  color: #3e3f5e;
+  font-size: 26px;
+  font-family: Rajdhani, sans-serif;
+  line-height: 1em;
+}
+.container-main .row .col-5 .box-login .account-login .form-field {
+  position: relative;
+  outline: 0;
+  margin-bottom: 30px;
+}
+.container-main .row .col-5 .box-login .account-login .form-field .form-input {
+  width: 100%;
+  height: 54px;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color 0.2s;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.container-main .row .col-5 .box-login .account-login .form-field .form-input:focus {
+  border-color: #615dfa;
+}
+.container-main .row .col-5 .box-login .account-login .form-field .form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 21px;
+  user-select: none;
+  color: #adafca;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.container-main .row .col-5 .box-login .account-login .form-field .form-input:not(:placeholder-shown) + .form-label,
+.container-main .row .col-5 .box-login .account-login .form-field .form-input:focus + .form-label {
+  display: inline-block;
+  background-color: #fff;
+  top: 0;
+  padding: 10px;
+}
+.container-main .row .col-5 .box-login .account-login .row {
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid {
+  display: flex;
+  justify-content: space-between;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .row-check {
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .row-check .remember-me:checked ~ i {
+  display: block;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .row-check .fa-solid {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  font-size: 20px;
+  font-weight: bolder;
+  top: 0.5px;
+  left: 0.5px;
+  color: #fff;
+  background-color: #00c7d9;
+  padding: 2px 4px;
+  border-radius: 5px;
+  border: transparent;
+  display: none;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .row-check::before {
+  content: " ";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dedeea;
+  margin-right: 12px;
+  border-radius: 5px;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .forgot {
+  font-size: 14px;
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 22px;
+}
+.container-main .row .col-5 .box-login .account-login .row .form-mid .forgot:hover {
+  color: #00c7d9;
+}
+.container-main .row .col-5 .box-login .account-login .row .btn-login {
+  display: inline-block;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #3e3f5e;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(98, 93, 250, 0.9450980392);
+  height: 54px;
+  line-height: 54px;
+}
+.container-main .row .col-5 .box-login .account-login .row .btn-login:hover {
+  background-color: #615dfa;
+}
+.container-main .row .col-5 .box-login .account-login .row .line-text {
+  font-family: "Rajdhani", sans-serif;
+  width: 100%;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.container-main .row .col-5 .box-login .account-login .row .line-text::before {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #eaeaf5;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.container-main .row .col-5 .box-login .account-login .row .line-text::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #eaeaf5;
+  position: absolute;
+  top: 7px;
+  right: 0;
+}
+.container-main .row .col-5 .box-login .account-login .row .social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.container-main .row .col-5 .box-login .account-login .row .social .facebook {
+  background-color: #3763d2;
+  color: #fff;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.container-main .row .col-5 .box-login .account-login .row .social .twitter {
+  background-color: #1abcff;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.container-main .row .col-5 .box-login .account-login .row .social .message {
+  background-color: #7b5dfa;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.container-main .row .col-5 .box-login .account-login .row .social .youtube {
+  background-color: #fd434f;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.container-main .row .col-5 .box-login .account-login .row .social .facebook:hover,
+.container-main .row .col-5 .box-login .account-login .row .social .youtube:hover,
+.container-main .row .col-5 .box-login .account-login .row .social .message:hover,
+.container-main .row .col-5 .box-login .account-login .row .social .twitter:hover {
+  transform: translateY(-4px);
+}
+.container-main .row .col-5 .box-create {
+  width: 484px;
+  height: auto;
+  position: absolute;
+  top: 5%;
+  right: -100%;
+  padding: 46px;
+  border-radius: 12px;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  background-color: #fff;
+  transition: all 0.6s ease-in-out 0s;
+}
+.container-main .row .col-5 .box-create .rocket2 {
+  position: absolute;
+  z-index: 1;
+  top: -14px;
+  left: -80px;
+}
+.container-main .row .col-5 .box-create .title {
+  margin-bottom: 76px;
+  text-align: center;
+  color: #3e3f5e;
+  font-size: 26px;
+  font-family: Rajdhani, sans-serif;
+  line-height: 1em;
+}
+.container-main .row .col-5 .box-create .form-field {
+  position: relative;
+  outline: 0;
+  margin-bottom: 30px;
+}
+.container-main .row .col-5 .box-create .form-field .form-input {
+  width: 100%;
+  height: 54px;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color 0.2s;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.container-main .row .col-5 .box-create .form-field .form-input:focus {
+  border-color: #615dfa;
+}
+.container-main .row .col-5 .box-create .form-field .form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 21px;
+  user-select: none;
+  color: #adafca;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.container-main .row .col-5 .box-create .form-field .form-input:not(:placeholder-shown) + .form-label,
+.container-main .row .col-5 .box-create .form-field .form-input:focus + .form-label {
+  display: inline-block;
+  background-color: #fff;
+  top: 0;
+  padding: 10px;
+}
+.container-main .row .col-5 .box-create .row {
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.container-main .row .col-5 .box-create .row .form-mid .row-check {
+  display: flex;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+.container-main .row .col-5 .box-create .row .form-mid .row-check .send:checked ~ i {
+  display: block;
+}
+.container-main .row .col-5 .box-create .row .form-mid .row-check .fa-solid {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  font-size: 20px;
+  font-weight: bolder;
+  top: 0.5px;
+  left: 0.5px;
+  color: #fff;
+  background-color: #00c7d9;
+  padding: 2px 4px;
+  border-radius: 5px;
+  border: transparent;
+  display: none;
+}
+.container-main .row .col-5 .box-create .row .form-mid .row-check::before {
+  content: " ";
+  display: inline-block;
+  float: left;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #dedeea;
+  margin-right: 12px;
+  border-radius: 5px;
+}
+.container-main .row .col-5 .box-create .row .btn-create {
+  display: inline-block;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #23d2e2;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  border: none;
+  height: 54px;
+  line-height: 54px;
+}
+.container-main .row .col-5 .box-create .row .btn-create:hover {
+  background-color: #23d2e2;
+}
+.container-main .row .col-5 .box-create p {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1.7142857143em;
+  font-weight: 500;
+}
+.container-main .row .col-5 .box-create p span a {
+  color: #23d2e2;
+}
+
+/*# sourceMappingURL=stylebai1.css.map */

@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #fff;
+  justify-content: center;
+}
+.header {
+  margin-top: 40px;
+  text-align: center;
+}
+.header p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+}
+.header h1 {
+  font-family: "Alfa Slab One";
+  font-size: 80px;
+  margin-top: 50px;
+}
+.header h1,
+.header p {
+  color: rgb(42, 28, 18);
+}
+.form div {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.form input,
+.form button {
+  width: 516px;
+  height: 81px;
+  padding-left: 20px;
+}
+.form input {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 25px;
+}
+.form .cta {
+  font-family: "Alfa Slab One", cursive;
+  color: #fff;
+  background-color: rgb(154, 31, 31);
+  border-radius: 8px;
+}

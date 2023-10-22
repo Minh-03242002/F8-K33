@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+section h2 {
+  margin-bottom: 20px;
+  font-size: 80px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0.75rem 0;
+}
+.tabs {
+  position: relative;
+  display: flex;
+  gap: 0.25rem;
+  min-height: 400px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.tab > .tab-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.tab input {
+  display: none;
+}
+.tab label {
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  padding: 0.6rem 1rem;
+}
+.tab > input:checked + label {
+  color: white;
+  background-color: #29388d;
+}
+.tab > input:checked ~ .tab-content {
+  display: inline-block;
+}
+.products {
+  display: grid;
+  margin-top: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.product-item {
+  text-align: center;
+}
+.image-wrapper {
+  position: relative;
+  display: flex;
+}
+.product-img {
+  width: 100%;
+}
+
+.product-img.hidden {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.product-img.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.product-item:hover .product-img.hidden {
+  opacity: 1;
+  visibility: visible;
+}
+.product-actions {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+  justify-content: center;
+}
+.product-item:hover .product-actions {
+  display: flex;
+}
+
+.product-actions div {
+  margin: 0 auto;
+}
+
+.product-actions div button {
+  cursor: pointer;
+  color: white;
+  background-color: #29388d;
+  border: none;
+  padding: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.product-actions > div > button:last-child {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+}
+
+.product-info {
+  margin-top: 2rem;
+}
+
+.product-info .rating {
+  width: 100%;
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.product-info .rating::before {
+  content: "★★★★★";
+  letter-spacing: 2px;
+  background: linear-gradient(
+    90deg,
+    #f4c341 var(--percent),
+    #9e9e9e var(--percent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.product-info .name {
+  margin: 0.75rem 0;
+}
+
+.product-info .price {
+  font-weight: bold;
+}
+
+.product-info .price::before {
+  content: "$";
+}

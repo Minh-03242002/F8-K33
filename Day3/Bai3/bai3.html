@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3</title>
+    <link rel="stylesheet" href="./bai3.css">
+</head>
+<body>
+    <form action="https://api-gateway.fullstack.edu.vn/action_page.php"
+    method="post">
+        <div>
+          <label for="username"> Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+    required
+        
+          />
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id=" password"
+             required
+            />
+          </div>
+
+          <div>
+            <label for="City ">City of</label>
+            <input
+              type="text"
+              name="city"
+              id=" city"
+              required
+              
+            />
+          </div>
+          
+
+          <div>
+                    <label for="web-server">Web server</label>
+                    <select id="web-server" name="web-server">
+                         <option value="0" hidden>-- Choose a server --</option>
+                         <option value="1" selected>Server 1</option>
+                         <option value="2">Server 2</option>
+                         <option value="2">Server 4</option>
+                         <option value="2">Server 5</option>
+                         <option value="2">Server 6</option>
+                         <option value="2">Server 7</option>
+                    </select>
+               </div>
+
+
+               <div>
+                <span>Please specify your role:</span>
+                <div class="role">
+                     <div class="option">
+                          <input type="radio" name="role" id="admin" value="1" />
+                          <label for="admin">Admin</label>
+                     </div>
+                     <div class="option">
+                          <input type="radio" name="role" id="engineer" value="2" />
+                          <label for="engineer">Engineer</label>
+                     </div>
+                     <div class="option">
+                          <input type="radio" name="role" id="manager" value="3" />
+                          <label for="manager">Manager</label>
+                     </div>
+                     <div class="option">
+                          <input type="radio" name="role" id="guest" value="4" />
+                          <label for="guest">Guest</label>
+                     </div>
+                </div>
+           </div>
+
+           <div>
+            <span>Single Sign-on to the following:</span>
+            <div class="role">
+                 <div class="option">
+                      <input type="checkbox" id="mail" name="mail" value="1" />
+                      <label for="mail">Mail</label>
+                 </div>
+                 <div class="option">
+                      <input type="checkbox" id="payroll" name="payroll" value="2" />
+                      <label for="payroll">Payroll</label>
+                 </div>
+                 <div class="option">
+                      <input
+                           type="checkbox"
+                           id="self-service"
+                           name="self-service"
+                           value="3" />
+                      <label for="self-service">Self-service</label>
+                 </div>
+            </div>
+       </div>
+       <!-- CTA -->
+       <button type="submit" class="btn1"> Login</button>
+       <button type="reset" class="btn2"> Resset</button>
+</body>
+</html>

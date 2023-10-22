@@ -1,0 +1,41 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 30px 0;
+  width: 100vw;
+}
+label {
+  background-color: rgb(281, 74, 35);
+  display: block;
+  margin-top: 10px;
+}
+.item .content {
+  margin: 10px 15px;
+}
+
+/* none */
+.item .fa-minus {
+  display: none;
+}
+.item input {
+  display: none;
+}
+.item .content {
+  display: none;
+}
+/* block */
+.item input:checked ~ label i.fa-plus {
+  display: none;
+}
+.item input:checked ~ label i.fa-minus {
+  display: inline-block;
+}
+.item input:checked ~ .content {
+  display: block;
+}

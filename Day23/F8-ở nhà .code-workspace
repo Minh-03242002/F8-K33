@@ -1,0 +1,26 @@
+{
+  "folders": [
+	{
+		"path": "../../F8-ở nhà "
+	},
+	{
+		"path": "../../Js Học Thêm "
+	},
+	{
+		"path": "../../JS ở nhà "
+	},
+	{
+		"path": "../../code"
+	},
+	{
+		"path": ".."
+	}
+],
+  "launch": {
+    "version": "0.2.0",
+    "configurations": []
+  },
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "F8-Offline-K3"
+  }
+}

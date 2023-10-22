@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="btn_main">Đăng nhập</button>
+
+    <div class="modal show">
+     
+      <div class="modal_box">
+        <div class="title_modal">
+          <button class="login">Đăng nhập</button>
+          <button class="register">Đăng Kí</button>
+        </div>
+
+        <!-- ===================== -->
+        <div class="form_login">
+          <div class="desc">
+            <span> với các tài khoản mạng xã hội</span>
+          </div>
+          <div class="social">
+            <a href="#">
+              <button class="google">
+                <i class="fa-brands fa-google"></i>
+                <span>Google</span>
+              </button>
+            </a>
+            <a href="#">
+              <button class="facebook">
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+              </button>
+            </a>
+          </div>
+          <div class="line">
+            <span> Hoặc</span>
+          </div>
+          <div class="form_group">
+            <div class="email">
+              <div class="title">Email</div>
+              <input type="email" placeholder="Email" />
+              <!-- <div class="error"> vui lòng nhập lại thông tin</div> -->
+            </div>
+
+            <div class="password">
+              <div class="title">Mật Khẩu</div>
+              <input type="password" placeholder="Mật khẩu " />
+              <i class="eye_on  fa-solid fa-eye-slash  "></i>
+              <i class="eye_off fa-regular fa-eye none" ></i>
+              <!-- <div class="error"> vui lòng nhập lại thông tin</div> -->
+
+            </div>
+
+            <a href="#">
+              <div class="forgot">
+                <span> Quên mật khẩu? </span>
+              </div>
+            </a>
+          </div>
+
+          <a href="#">
+            <button class="btn_login"><span> Đăng Nhập</span></button>
+          </a>
+        </div>
+        <!-- end form log -->
+        <div class="form_register">
+          <span class="desc">
+            Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!</span
+          >
+
+          <div class="form_group">
+            <div class="name">
+              <div class="title">Họ và tên</div>
+              <input type="text" placeholder="Họ và tên" />
+
+              <div class="email">
+                <div class="title">Email</div>
+                <input type="email" placeholder="Email" />
+
+                <div class="password">
+                  <div class="title">Mật Khẩu</div>
+                  <input type="password" placeholder="Mật khẩu " />
+                  <i class="eye_on  fa-solid fa-eye-slash  "></i>
+              <i class="eye_off fa-regular fa-eye " ></i> 
+                </div>
+              </div>
+              <p class="policy">
+                Bằng cách đăng ký tài khoản, bạn cũng đồng thời chấp nhận mọi
+                <span
+                  ><a href="#"
+                    >điều kiện về qui định và chính sách của Dân trí</a
+                  ></span
+                >
+              </p>
+              <a href="#">
+                <button class="btn_register"><span> Đăng Kí</span></button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    </div>
+
+    <script src="./java.js"></script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 20px;
+}
+
+.container{
+  width: 550px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  margin-bottom: 35px;
+}
+ 
+
+.header title{
+
+}
+.header .subtitle span{
+  color:red
+}
+.forms{
+  display: flex;
+  
+  flex-direction: column;
+}
+.form {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  margin-bottom: 30px;
+}
+ .popup{
+  padding: 14px;
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  top: -61px;
+  left: 84px;
+  display: none;}
+  
+  .popup::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    bottom: -6px;
+    left: 13px;
+    transform: rotate(45deg);
+  }
+  .form label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd;
+    width: 58px;
+    height: 58px;
+  }
+  .form .label-long {
+    height: 240px;
+  }
+  .form i {
+    color: #fff;
+    
+  }
+  textarea,
+input:not(input[type="checkbox"]),
+select {
+  width: calc(100% - 55px);
+  height: 58px;
+  border: 1px solid #dddddd;
+  outline: none;
+  padding: 0 20px;
+  color: #929090;
+  font-size: 18px;
+}
+textarea {
+  padding-top: 20px;
+  height: 240px;
+  resize: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #929090;
+}
+
+.form .fa-star {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  color: #ababab;
+}
+.form-group i.fa-star {
+  font-size: 10px;
+}
+
+.forms i.fa-star {
+  font-size: 13px;
+}
+
+
+
+button {
+  width: 132px;
+  height: 40px;
+  background-color: #f43f26;
+  font-size: 23px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(0.9);
+}
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.send-message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+  user-select: none;
+}
+
+.send-message::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #ababab;
+  margin-right: 10px;
+} 
+
+
+
+
+
+textarea:hover ~ label,
+input:not(input[type="checkbox"]):hover ~ label,
+select:hover ~ label,
+textarea:focus ~ label,
+input:not(input[type="checkbox"]):focus ~ label,
+select:focus ~ label {
+  border-color: #000;
+  background-color: #000;
+}
+
+textarea:hover,
+input:not(input[type="checkbox"]):hover,
+select:hover,
+textarea:focus,
+input:not(input[type="checkbox"]):focus,
+select:focus {
+  border-color: #000;
+}
+
+textarea:active ~ p.popup,
+input:not(input[type="checkbox"]):active ~ .popup,
+select:active ~ p.popup,
+textarea:focus ~ p.popup,
+input:not(input[type="checkbox"]):focus ~ p.popup,
+select:focus ~ p.popup{
+  display: block;
+}
+label .send-message{
+ background-color: #fff;
+}

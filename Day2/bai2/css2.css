@@ -1,0 +1,16 @@
+table {
+  margin-left: auto;
+  width: 700px;
+  height: 700px;
+}
+table td {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  border: 4px #ccc;
+  border: double;
+}
+table tr,
+tr td {
+  border-left: none;
+}

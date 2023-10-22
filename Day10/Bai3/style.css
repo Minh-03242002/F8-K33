@@ -1,0 +1,126 @@
+body {
+  background-color: #ccc;
+}
+:root .envelope {
+  width: 500px;
+
+  padding-top: 200px;
+
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  visibility: visible;
+}
+.box {
+  display: inline-block;
+  margin: auto;
+  background-color: transparent;
+  border-top: 100px solid transparent;
+  border-left: 200px solid rgb(234, 76, 76);
+  border-right: 200px solid#ec5d50;
+  border-bottom: 100px solid #ec5d50;
+  z-index: 3;
+}
+
+.close {
+  border-top: 100px solid #ee3c28;
+  border-bottom: 100px solid transparent;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+
+  /* transition: all 5s ease; */
+  z-index: 3;
+  transition-delay: 1s;
+  opacity: 1;
+}
+
+.open {
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid #ec5d50;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  position: absolute;
+
+  bottom: 200px;
+  left: 50px;
+  z-index: 1;
+  display: none;
+  opacity: 1;
+}
+.envelope:hover .letter {
+  transform: translateY(-120px);
+}
+.envelope:hover .open {
+  display: block;
+}
+.envelope:hover .close {
+  display: none;
+}
+.letter {
+  position: absolute;
+  transition: all 0.5s ease;
+  transform: translateY(100px);
+
+  transform-origin: 100 100;
+  border-top: 1.25rem solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(
+        -45deg,
+        #e66e61 0,
+        #e66e61 12.5%,
+        transparent 0,
+        transparent 25%
+      )
+      0/6rem 6em;
+
+  left: 50px;
+  margin: 0 30px;
+
+  background-color: #fff;
+  width: 340px;
+  height: 350px;
+  z-index: 2;
+}
+
+.letter .text span:nth-child(1) {
+  margin: 20px 20px;
+  display: block;
+  width: 140px;
+  height: 25px;
+  background-color: #e66e61;
+}
+.letter .text span:nth-child(2) {
+  margin: 20px 20px;
+  display: block;
+  width: 80px;
+  height: 25px;
+  background-color: #e66e61;
+}
+.letter .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e66e6130;
+  border-radius: 99px;
+  top: -10px;
+  margin-left: 95%;
+  translate: -100%;
+  left: 0;
+}
+@keyframes move {
+  form {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}

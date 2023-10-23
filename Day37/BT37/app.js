@@ -104,41 +104,7 @@ const app = {
     });
   },
 
-  // handlePost: async function (data) {
-  //   let loginTokens = localStorage.getItem("login_tokens");
 
-  //   loginTokens = JSON.parse(loginTokens);
-
-  //   const { access_token: accessToken, refresh_token: refreshToken } =
-  //     loginTokens;
-  //   client.setToken(accessToken);
-  //   const { data: tokens, response } = await client.post("/blogs", data);
-
-  //   if (response.ok) {
-  //     this.handlePost(data);
-  //   } else {
-  //     if (response.status === 401) {
-  //       let loginTokens = localStorage.getItem("login_tokens");
-  //       loginTokens = JSON.parse(loginTokens);
-
-  //       const { refreshToken } = loginTokens;
-
-  //       const newToken = await requestRefresh(refreshToken);
-
-  //       if (!newToken) {
-  //         // this.handleLogout();
-  //       } else {
-  //         localStorage.setItem(
-  //           "login_tokens",
-  //           JSON.stringify(newToken.data.token)
-  //         );
-  //         this.handlePost(data);
-
-  //         await this.render();
-  //       }
-  //     }
-  //   }
-  // },
   handlePost: async function (data) {
   
     let loginTokens = localStorage.getItem("login_tokens");

@@ -1,5 +1,3 @@
-
-
 import { client } from "./client.js";
 import { requestRefresh } from "./token.js";
 client.setUrl("https://api-auth-two.vercel.app");
@@ -43,13 +41,12 @@ const app = {
         </ul>
       </div>
         </div>`;
-       
-      
+
       const profileName = document.querySelector(".profile .name");
       this.getProfile(profileName);
-      this.eventLogout(); 
+      this.eventLogout();
       this.loadPreLoginPosts();
-      this.eventPost()
+      this.eventPost();
     } else {
       root.innerHTML = `<div class="container py-3">
         <div class="row justify-content-center">
@@ -58,11 +55,10 @@ const app = {
             <form class="login">
               <div class="mb-3">
                 <label for="">Email</label>
-                <input type="email" class="form-control email" placeholder="Email...">
-              </div>
+                <input type="email" class="form-control email" placeholder="Email..." value="a@gmail.com">              </div>
               <div class="mb-3">
                 <label for="">Mật khẩu</label>
-                <input type="password" class="form-control password" placeholder="Mật khẩu...">
+                <input type="password" class="form-control password" placeholder="Mật khẩu..."value ="12345678">
               </div>
               <div class="d-grid">
                 <button type="submit" class="btn btn-primary">Đăng nhập</button>
@@ -87,46 +83,104 @@ const app = {
     
       `;
 
-      
-      
-      
       await this.loadPreLoginPosts();
       this.eventLogin();
-      this.eventPost()
+      this.eventPost();
     }
   },
 
   eventPost: function () {
-   
+    const form = document.querySelector(".post-form");
     const titleEl = document.querySelector(".title");
-    const contentEl = document.querySelector(".content");
-    const postBtn = document.querySelector(".post-btn")
-  
+    const contentEl = form.querySelector(".content");
+    const postBtn = form.querySelector(".post-btn");
+
     postBtn.addEventListener("click", function (e) {
       e.preventDefault();
       const title = titleEl.value;
       const content = contentEl.value;
-      console.log({ title, content } );
-      app.handlePost({ title, content } );
-   
+      console.log({ title, content });
+      app.handlePost({ title, content });
     });
   },
-  
-  
+
+  // handlePost: async function (data) {
+  //   let loginTokens = localStorage.getItem("login_tokens");
+
+  //   loginTokens = JSON.parse(loginTokens);
+
+  //   const { access_token: accessToken, refresh_token: refreshToken } =
+  //     loginTokens;
+  //   client.setToken(accessToken);
+  //   const { data: tokens, response } = await client.post("/blogs", data);
+
+  //   if (response.ok) {
+  //     this.handlePost(data);
+  //   } else {
+  //     if (response.status === 401) {
+  //       let loginTokens = localStorage.getItem("login_tokens");
+  //       loginTokens = JSON.parse(loginTokens);
+
+  //       const { refreshToken } = loginTokens;
+
+  //       const newToken = await requestRefresh(refreshToken);
+
+  //       if (!newToken) {
+  //         // this.handleLogout();
+  //       } else {
+  //         localStorage.setItem(
+  //           "login_tokens",
+  //           JSON.stringify(newToken.data.token)
+  //         );
+  //         this.handlePost(data);
+
+  //         await this.render();
+  //       }
+  //     }
+  //   }
+  // },
   handlePost: async function (data) {
-const { data: tokens, response } = await client.post("/blogs", data);
+  
+    let loginTokens = localStorage.getItem("login_tokens");
+    loginTokens = JSON.parse(loginTokens);
 
-    this.handlePost(data);
+    const { access_token: accessToken, refresh_token: refreshToken } =
+      loginTokens;
+console.log(refreshToken);
+    //Thêm token vào request header
+    client.setToken(accessToken);
+    const { response, data:tokens } = await client.get("/blogs",data);
+console.log(response,data);
+    if (response.ok) {
+      this.handlePost(data);
+    } else {
+      const newToken = await requestRefresh(refreshToken);
+      //Không lấy được token mới -> Đăng xuất
+      if (!newToken) {
+        // logout
+        this.handleLogout();
+      } else {
+        //Cập nhật token mới vào localStorage
+        localStorage.setItem("login_tokens", JSON.stringify(newToken));
+        client.setToken(newToken.access_token);
+        //Render
+        
 
+        this.render();
+        this.handlePost(data);
+      }
+    }
   
   },
-  
+
   loadPreLoginPosts: async function () {
     const preLoginPostList = document.getElementById("preLoginPostList");
     try {
-      const { response, data: _data } = await client.get(`/blogs?page=${currentPage}`);
+      const { response, data: _data } = await client.get(
+        `/blogs?page=${currentPage}`
+      );
       const data = _data.data;
-    
+
       if (data) {
         for (let post of data) {
           const li = document.createElement("li");
@@ -144,7 +198,6 @@ const { data: tokens, response } = await client.post("/blogs", data);
       console.error("Error loading pre-login posts:", error);
     }
   },
-  
 
   isLogin: function () {
     if (localStorage.getItem("login_tokens")) {
@@ -177,10 +230,8 @@ const { data: tokens, response } = await client.post("/blogs", data);
     const { response, data } = await client.get("/auth/profile");
 
     if (response.ok) {
-    
       el.innerText = data.name;
     } else {
-     
       const newToken = await requestRefresh(refreshToken);
       //Không lấy được token mới -> Đăng xuất
       if (!newToken) {

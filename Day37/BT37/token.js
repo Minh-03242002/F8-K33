@@ -1,8 +1,9 @@
 import { client } from "./client.js";
-client.setUrl("https://api.escuelajs.co/api/v1");
+client.setUrl("https://api-auth-two.vercel.app");
+
 export const requestRefresh = async function (refreshToken) {
   const { response, data } = await client.post("/auth/refresh-token", {
-    refreshToken,
+    refreshToken
   });
   if (response.ok) {
     return data;
